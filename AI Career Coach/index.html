@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Coach - Your Personal Career Development Partner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <h2>AI Career Coach</h2>
+            </div>
+            <button class="navbar-toggle" id="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="#home" class="navbar-link">Home</a>
+                <a href="#upload" class="navbar-link">Upload Resume</a>
+                <a href="#analysis" class="navbar-link">Analysis</a>
+                <a href="#recommendations" class="navbar-link">Recommendations</a>
+                <a href="#jobs" class="navbar-link">Jobs</a>
+                <a href="#tips" class="navbar-link">Tips</a>
+                <a href="#profile" class="navbar-link">Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Homepage/Landing -->
+    <section id="home" class="section hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Career with AI-Powered Coaching</h1>
+                <p class="hero-subtitle">Upload your resume and get personalized career recommendations, job matches, and expert coaching tips tailored to your unique profile.</p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">📄</div>
+                        <h3>Resume Analysis</h3>
+                        <p>AI-powered analysis of your resume with actionable insights</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Career Recommendations</h3>
+                        <p>Personalized job role suggestions based on your skills</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Job Matching</h3>
+                        <p>Find jobs that perfectly match your profile and experience</p>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--lg" onclick="navigateToSection('upload')">
+                    Get Started - Upload Resume
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Upload Section -->
+    <section id="upload" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upload Your Resume</h2>
+                <p>Upload your resume to get started with AI-powered career analysis</p>
+            </div>
+            <div class="upload-container">
+                <div class="upload-zone" id="upload-zone">
+                    <div class="upload-icon">📁</div>
+                    <h3>Drag & Drop Your Resume</h3>
+                    <p>or click to browse files</p>
+                    <p class="upload-formats">Supported formats: PDF, DOC, DOCX</p>
+                    <input type="file" id="file-input" accept=".pdf,.doc,.docx" hidden>
+                </div>
+                <div class="upload-progress" id="upload-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <p class="progress-text" id="progress-text">Uploading...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Analysis Dashboard -->
+    <section id="analysis" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resume Analysis</h2>
+                <p>Here's what our AI discovered about your profile</p>
+            </div>
+            <div class="analysis-grid">
+                <div class="card analysis-score">
+                    <div class="card__body">
+                        <h3>Resume Score</h3>
+                        <div class="score-circle">
+                            <div class="score-value" id="resume-score">85</div>
+                            <div class="score-label">/ 100</div>
+                        </div>
+                        <p>Your resume is well-structured with strong technical skills</p>
+                    </div>
+                </div>
+                
+                <div class="card contact-info">
+                    <div class="card__body">
+                        <h3>Contact Information</h3>
+                        <div class="contact-details" id="contact-details">
+                            <p><strong>Name:</strong> <span id="user-name">John Smith</span></p>
+                            <p><strong>Email:</strong> <span id="user-email">john.smith@email.com</span></p>
+                            <p><strong>Phone:</strong> <span id="user-phone">+1 (555) 123-4567</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card skills-section">
+                <div class="card__body">
+                    <h3>Skills Analysis</h3>
+                    <div class="skills-container" id="skills-container">
+                        <!-- Skills will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card experience-section">
+                <div class="card__body">
+                    <h3>Experience Timeline</h3>
+                    <div class="experience-timeline" id="experience-timeline">
+                        <!-- Experience will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card education-section">
+                <div class="card__body">
+                    <h3>Education</h3>
+                    <div class="education-details" id="education-details">
+                        <!-- Education will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Recommendations -->
+    <section id="recommendations" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Career Recommendations</h2>
+                <p>Personalized job role suggestions based on your skills and experience</p>
+            </div>
+            <div class="recommendations-grid" id="recommendations-grid">
+                <!-- Recommendations will be populated by JavaScript -->
+            </div>
+            
+            <div class="card skill-gaps">
+                <div class="card__body">
+                    <h3>Skill Gap Analysis</h3>
+                    <p>Skills to focus on for better career opportunities</p>
+                    <div class="skill-gaps-list" id="skill-gaps-list">
+                        <!-- Skill gaps will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Matching -->
+    <section id="jobs" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Job Matches</h2>
+                <p>Jobs that match your profile and skills</p>
+            </div>
+            
+            <div class="jobs-filters">
+                <select class="form-control" id="job-filter">
+                    <option value="all">All Jobs</option>
+                    <option value="remote">Remote Only</option>
+                    <option value="high-match">High Match (90%+)</option>
+                </select>
+            </div>
+            
+            <div class="jobs-grid" id="jobs-grid">
+                <!-- Jobs will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaching Tips -->
+    <section id="tips" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Career Coaching Tips</h2>
+                <p>Expert advice to accelerate your career growth</p>
+            </div>
+            
+            <div class="tips-categories">
+                <button class="btn btn--outline category-btn active" data-category="all">All Tips</button>
+                <button class="btn btn--outline category-btn" data-category="Resume">Resume</button>
+                <button class="btn btn--outline category-btn" data-category="Interview">Interview</button>
+                <button class="btn btn--outline category-btn" data-category="Portfolio">Portfolio</button>
+                <button class="btn btn--outline category-btn" data-category="Networking">Networking</button>
+            </div>
+            
+            <div class="tips-grid" id="tips-grid">
+                <!-- Tips will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- User Profile -->
+    <section id="profile" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Profile</h2>
+                <p>Manage your career development journey</p>
+            </div>
+            
+            <div class="profile-grid">
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Upload History</h3>
+                        <div class="upload-history">
+                            <div class="history-item">
+                                <div class="history-icon">📄</div>
+                                <div class="history-details">
+                                    <p><strong>resume_v1.pdf</strong></p>
+                                    <p class="text-secondary">Uploaded today</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Saved Jobs</h3>
+                        <div class="saved-jobs">
+                            <p class="text-secondary">No saved jobs yet. Start exploring job matches!</p>
+                            <button class="btn btn--primary btn--sm" onclick="navigateToSection('jobs')">
+                                Browse Jobs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Progress Tracking</h3>
+                        <div class="progress-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">85%</div>
+                                <div class="stat-label">Resume Score</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">Recommendations</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">12</div>
+                                <div class="stat-label">Job Matches</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Analyzing your resume...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
