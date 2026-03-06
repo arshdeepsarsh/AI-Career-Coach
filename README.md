@@ -1,5 +1,15 @@
 # AI Career Coach — Intelligent Career Guidance Assistant
 
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![AI Powered](https://img.shields.io/badge/AI-Powered-green)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange)
+![LLM](https://img.shields.io/badge/LLM-Enabled-purple)
+![Status](https://img.shields.io/badge/Project-Active-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Maintained](https://img.shields.io/badge/Maintained-Yes-blue)
+![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)
+
+
 AI Career Coach is an AI-powered application designed to help users make informed career decisions by analyzing their interests, skills, and goals.
 It provides personalized career guidance, learning recommendations, and role-based insights using AI-driven reasoning.
 
